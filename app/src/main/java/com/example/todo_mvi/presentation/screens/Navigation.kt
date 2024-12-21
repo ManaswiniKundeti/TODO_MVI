@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.todo_mvi.presentation.viewmodel.MainActivityViewModel
 
 object Navigation {
     val SPLASH_SCREEN = "SplashScreen"
@@ -11,7 +12,7 @@ object Navigation {
 }
 
 @Composable
-fun Onboarding() {
+fun Onboarding(mainViewmodel: MainActivityViewModel) {
     val navController =  rememberNavController()
 
     NavHost(navController = navController, startDestination = Navigation.SPLASH_SCREEN) {
@@ -19,7 +20,7 @@ fun Onboarding() {
             SplashScreen(navController)
         }
         composable(Navigation.HOME_SCREEN) {
-            HomeScreen(navController)
+            HomeScreen(navController, mainViewmodel)
         }
     }
 }
