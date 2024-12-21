@@ -4,6 +4,6 @@ data class Tasks(
     val taskId: Long,
     val taskName: String,
     val taskDetails: String,
-    val taskEndData: String,
+    val taskEndDate: String,
     val taskFiles: MutableList<String> = mutableListOf()
 )
