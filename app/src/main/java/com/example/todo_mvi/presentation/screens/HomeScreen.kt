@@ -53,17 +53,16 @@ fun HomeScreen(navController: NavHostController, mainViewmodel: MainActivityView
             .height(70.dp)
             .background(color = PrimaryLightColor)
             .constrainAs(toolbar) {
-                top.linkTo(parent.top)
+                top.linkTo(parent.top, margin = 15.dp)
                 start.linkTo(parent.start)
                 end.linkTo(parent.end)
-                width = Dimension.fillToConstraints
-                height = Dimension.fillToConstraints
-            }
-        ) {
-            Image(painter = painterResource(R.drawable.profile_icon),
-                contentDescription = "Profile icons",
+            }) {
+            Image(
+                painter = painterResource(id = R.drawable.profile_icon),
+                contentDescription = "Image",
                 modifier = Modifier.fillMaxSize(),
-                alignment = Alignment.CenterEnd)
+                alignment = Alignment.CenterEnd
+            )
         }
 
         Box(modifier = Modifier
