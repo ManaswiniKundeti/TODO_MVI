@@ -176,7 +176,10 @@ fun HomeScreen(navController: NavHostController, mainViewmodel: MainActivityView
         }
 
         // Add Floating action button
-        FloatingActionButton(onClick = {},
+        FloatingActionButton(
+            onClick = {
+                mainViewmodel.homeUIEvent(HomeUIEvents.ToggleDialog)
+            },
             containerColor = PrimaryColor,
             contentColor = PrimaryLightColor,
             shape = CircleShape,

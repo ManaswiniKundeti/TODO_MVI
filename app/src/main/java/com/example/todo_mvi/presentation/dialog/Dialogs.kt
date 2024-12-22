@@ -76,11 +76,9 @@ import java.util.Locale
 @Composable
 fun AddTaskDialog(
     onDismissRequest: () -> Unit,
-    onAddRequest: (task: Tasks) -> Unit,
-//    galleryLauncher: ManagedActivityResultLauncher<String, Uri?>
+    onAddRequest: (task: Tasks) -> Unit
 ) {
     val TAG = "AddTaskDialog"
-
 
     val task = remember {
         mutableStateOf(Tasks(0, "", "", "", mutableListOf()))
